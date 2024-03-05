@@ -1,21 +1,9 @@
 import { ReactElement } from 'react'
 
-import { ListCustomer } from '@/pages/listCustomer'
-import { Sidebar } from '@/components/Sidebar'
+import { Home } from '@/pages/home'
 
 function App(): ReactElement {
-  return (
-    <main>
-      <div className="container">
-        <div className="sidebar-wrapper">
-          <Sidebar title="Páginas" buttonName={['Registrar Cliente', 'Lista de Clientes']} />
-        </div>
-        <div className="list-customer-wrapper">
-          <ListCustomer />
-        </div>
-      </div>
-    </main>
-  )
+  return <Home />
 }
 
 export default App

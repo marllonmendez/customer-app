@@ -1,12 +1,15 @@
 import axios, { AxiosPromise } from 'axios'
+
 import { useQuery } from '@tanstack/react-query'
+
 import { CustomerData } from '@/interface/CustomerData'
+import { env } from '@/env'
 
 const fetchData = async (): AxiosPromise<CustomerData[]> => {
-  return axios.get('http://localhost:8080/customers/list')
+  return axios.get(env.LIST)
 }
 
-export function useCustomerData() {
+export function useCustomer(): { data: CustomerData[] | undefined } {
   const query = useQuery({
     queryFn: fetchData,
     queryKey: ['customer-data'],

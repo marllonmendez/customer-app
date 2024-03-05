@@ -10,25 +10,27 @@ import {
   SidebarContainer,
   SidebarTitle
 } from '@/components/Sidebar/styles'
+import { listCustomer, registerCustomer } from '@/utils'
 
 type SidebarProps = {
   title: string
   buttonName: string[]
+  handle: (page: string) => void
 }
 
 const buttonIcons = {
-  'Registrar Cliente': HiUserPlus,
-  'Lista de Clientes': RiFileList3Fill
+  [registerCustomer]: HiUserPlus,
+  [listCustomer]: RiFileList3Fill
 }
 
-function Sidebar({ title, buttonName }: SidebarProps): ReactElement {
+function Sidebar({ title, buttonName, handle }: SidebarProps): ReactElement {
   return (
     <SidebarContainer>
       <SidebarTitle>{title}</SidebarTitle>
       {buttonName.map((value, index) => {
         const Icon = buttonIcons[value]
         return (
-          <SidebarButton key={index}>
+          <SidebarButton key={index} onClick={() => handle(value)}>
             <IconWrapper>
               {Icon && <Icon size={20} />}
               <ButtonText>{value}</ButtonText>

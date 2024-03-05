@@ -1,5 +1,6 @@
 import { ReactElement } from 'react'
-import { StyledTable, StyledTitleData } from "@/components/Table/styles";
+
+import { StyledTable, StyledTitleData } from '@/components/Table/styles'
 
 interface TableProps {
   name: string

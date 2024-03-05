@@ -14,5 +14,5 @@ export const StyledTable = styled.table`
 `
 
 export const StyledTitleData = styled.td`
-  padding: 10px 5px 10px;
+  padding: 10px 10px;
 `

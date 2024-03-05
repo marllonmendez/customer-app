@@ -16,6 +16,10 @@ body {
   overflow: hidden;
   background-size: cover;
   user-select: none;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -23,17 +27,14 @@ body {
   justify-content: center;
 }
 
-.sidebar-wrapper,
-.list-customer-wrapper {
-  flex: 1;
-}
-
 .sidebar-wrapper {
-  max-width: 50%;
+  width: 30%;
+  height: 100%;
 }
 
-.list-customer-wrapper {
-  max-width: 50%;
+.page-wrapper {
+  flex: 1;
+  height: 100%;
 }
 
 @media screen and (max-width: 768px) {

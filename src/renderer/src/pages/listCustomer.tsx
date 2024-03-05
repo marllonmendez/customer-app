@@ -1,13 +1,14 @@
 import { ReactElement } from 'react'
-import { useCustomerData } from '@/hooks/useCustomerData'
+import { useCustomer } from '@/hooks/useCustomer'
 import { StyledTable, StyledTitleData, TableContainer } from '@/components/Table/styles'
+import { listCustomer } from '@/utils'
 
 export function ListCustomer(): ReactElement {
-  const { data } = useCustomerData()
+  const { data } = useCustomer()
 
   return (
     <TableContainer>
-      <h1>Lista de Clientes</h1>
+      <h1>{listCustomer}</h1>
       <StyledTable>
         <thead>
           <tr>

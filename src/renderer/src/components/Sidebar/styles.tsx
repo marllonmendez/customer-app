@@ -15,7 +15,7 @@ export const SidebarButton = styled.button`
   font-weight: 600;
   padding: 10px;
   margin: 5px;
-  width: 25%;
+  width: 40%;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -23,6 +23,14 @@ export const SidebarButton = styled.button`
   &:hover {
     background-color: var(--hover-background-color);
     color: var(--global-color);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 900px) {
+    width: 65%;
+  }
+
+  @media screen and (min-width: 901px) and (max-width: 1307px) {
+    width: 50%;
   }
 `
 
