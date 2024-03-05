@@ -2,12 +2,12 @@ import { ReactElement } from 'react'
 
 import { StyledInput, StyledTitle } from './styles'
 
-type Props = {
+type InputProps = {
   label: string
   placeHolder: string
 }
 
-function Input({ label, placeHolder }: Props): ReactElement {
+function Input({ label, placeHolder }: InputProps): ReactElement {
   return (
     <div>
       <StyledTitle>{label}</StyledTitle>
