@@ -8,5 +8,5 @@
       "@/*":["src/renderer/src/*"]
     }
   },
-    "types": ["electron-vite/node"]
+    "types": ["electron-vite/node", "vite/client"]
   }

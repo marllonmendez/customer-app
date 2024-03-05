@@ -1,13 +1,9 @@
 import { ReactElement } from 'react'
 
-import { RegisterCustomer } from '@/pages/registerCustomer'
+import { Home } from '@/pages/home'
 
 function App(): ReactElement {
-  return (
-    <main>
-      <RegisterCustomer></RegisterCustomer>
-    </main>
-  )
+  return <Home />
 }
 
 export default App
