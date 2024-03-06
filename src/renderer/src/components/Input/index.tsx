@@ -8,9 +8,17 @@ type InputProps = {
   value?: string
   handle?: (format: string) => void
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  maxLength?: number
 }
 
-function Input({ label, placeHolder, value, handle, onChange }: InputProps): ReactElement {
+function Input({
+  label,
+  placeHolder,
+  value,
+  handle,
+  onChange,
+  maxLength
+}: InputProps): ReactElement {
   return (
     <div>
       <StyledTitle>{label}</StyledTitle>
@@ -19,7 +27,7 @@ function Input({ label, placeHolder, value, handle, onChange }: InputProps): Rea
         value={value}
         onChange={onChange}
         onBlur={() => (handle ? handle(value as string) : '')}
-        maxLength={11}
+        maxLength={maxLength}
       ></StyledInput>
     </div>
   )

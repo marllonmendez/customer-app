@@ -23,6 +23,7 @@ export function RegisterCustomer(): ReactElement {
         placeHolder="123.456.789-00"
         value={currentFormat}
         onChange={handleDocumentChange}
+        maxLength={11}
       ></Input>
       <Input label="Celular" placeHolder="(85) 1234-5678"></Input>
       <Input label="Email" placeHolder="cliente@gmail.com"></Input>
