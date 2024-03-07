@@ -1,13 +1,12 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 
-import { StyledInput, StyledTitle } from './styles'
+import { StyledInput, StyledInputTitle, StyledInputData } from './styles'
 
 type InputProps = {
   label: string
   placeHolder: string
-  value?: string
-  handle?: (format: string) => void
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  value: string
+  updateValue(value: any): void
   maxLength?: number
 }
 
@@ -15,21 +14,19 @@ function Input({
   label,
   placeHolder,
   value,
-  handle,
-  onChange,
-  maxLength
+  updateValue,
+  maxLength,
 }: InputProps): ReactElement {
   return (
-    <div>
-      <StyledTitle>{label}</StyledTitle>
-      <StyledInput
+    <StyledInput>
+      <StyledInputTitle>{label}</StyledInputTitle>
+      <StyledInputData
         placeholder={placeHolder}
         value={value}
-        onChange={onChange}
-        onBlur={() => (handle ? handle(value as string) : '')}
+        onChange={(e) => updateValue(e.target.value)}
         maxLength={maxLength}
-      ></StyledInput>
-    </div>
+      ></StyledInputData>
+    </StyledInput>
   )
 }
 

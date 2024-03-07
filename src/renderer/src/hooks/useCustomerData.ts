@@ -6,10 +6,10 @@ import { CustomerData } from '@/interface/CustomerData'
 import { env } from '@/env'
 
 const fetchData = async (): AxiosPromise<CustomerData[]> => {
-  return axios.get(env.LIST)
+  return axios.get(env.GET)
 }
 
-export function useCustomer(): { data: CustomerData[] | undefined } {
+export function useCustomerData() {
   const query = useQuery({
     queryFn: fetchData,
     queryKey: ['customer-data'],

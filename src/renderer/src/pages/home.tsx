@@ -1,12 +1,12 @@
 import { ReactElement } from 'react'
 
 import { Sidebar } from '@/components/Sidebar'
-import { useSidebar } from '@/hooks'
+import { useSidebarData } from '@/hooks'
 import { listCustomer, registerCustomer } from '@/utils'
 
 export function Home(): ReactElement {
-  const { handleButtonClick, getPageComponent } = useSidebar()
-  const PageComonent = getPageComponent()
+  const { handleButtonClick, getPageComponent } = useSidebarData()
+  const PageComponent = getPageComponent()
 
   return (
     <main>
@@ -19,7 +19,7 @@ export function Home(): ReactElement {
           />
         </div>
         <div className="page-wrapper">
-          <PageComonent />
+          <PageComponent />
         </div>
       </div>
     </main>

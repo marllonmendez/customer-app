@@ -1,25 +1,27 @@
-import { ReactElement } from 'react'
+import { ReactElement, ReactNode } from 'react'
 
-import { StyledTable, StyledTitleData } from '@/components/Table/styles'
+import { StyledTable, StyledColumnTitle } from '@/components/Table/styles'
 
 interface TableProps {
-  name: string
-  document: number
-  numberPhone: number
+  label: string
+  document: string
+  numberPhone: string
   email: string
+  children: ReactNode
 }
 
-function Table({ name, document, numberPhone, email }: TableProps): ReactElement {
+function Table({ label, document, numberPhone, email, children }: TableProps): ReactElement {
   return (
     <StyledTable>
-      <tbody>
+      <thead>
         <tr>
-          <StyledTitleData>{name}</StyledTitleData>
-          <StyledTitleData>{document}</StyledTitleData>
-          <StyledTitleData>{numberPhone}</StyledTitleData>
-          <StyledTitleData>{email}</StyledTitleData>
+          <StyledColumnTitle>{label}</StyledColumnTitle>
+          <StyledColumnTitle>{document}</StyledColumnTitle>
+          <StyledColumnTitle>{numberPhone}</StyledColumnTitle>
+          <StyledColumnTitle>{email}</StyledColumnTitle>
         </tr>
-      </tbody>
+      </thead>
+      {children}
     </StyledTable>
   )
 }

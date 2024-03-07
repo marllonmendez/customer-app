@@ -2,17 +2,18 @@
 
 :root {
   --global-font-family: 'Poppins', sans-serif;
-  --global-background-color: #252836;
-  --global-color: #E0E6E9;
-  --hover-background-color: #1a1e24
+  --primary-color: #FFFFFF;
+  --secondary-color: #252836;
+  --hover-color: #1a1e24;
+  --border-color: #c6c5c5c5;
+  --text-color: #000000E5;
+  --line-color: #f2f2f2;
 }
 
 body {
   font-family: var(--global-font-family);
-  background-color: var(--global-background-color);
-  color: var(--global-color);
-  align-items: center;
-  justify-content: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   overflow: hidden;
   background-size: cover;
   user-select: none;
@@ -29,20 +30,9 @@ body {
 
 .sidebar-wrapper {
   width: 30%;
-  height: 100%;
 }
 
 .page-wrapper {
-  flex: 1;
+  flex: auto;
   height: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .sidebar-wrapper,
-  .list-customer-wrapper {
-    max-width: 100%;
-  }
 }

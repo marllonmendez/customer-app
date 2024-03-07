@@ -1,35 +1,28 @@
 import { ReactElement } from 'react'
 
-import { StyledTable, StyledTitleData, TableContainer } from '@/components/Table/styles'
-import { useCustomer } from '@/hooks/useCustomer'
-import { document, listCustomer } from '@/utils'
+import { StyledTitleData, TableContainer, StyledLines } from '@/components/Table/styles'
+import { useCustomerData } from '@/hooks/useCustomerData'
+import { listCustomer, documentFormat } from '@/utils'
+import { Table } from '@/components/Table'
 
 export function ListCustomer(): ReactElement {
-  const { data } = useCustomer()
+  const { data } = useCustomerData()
 
   return (
     <TableContainer>
       <h1>{listCustomer}</h1>
-      <StyledTable>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Celular</th>
-            <th>Email</th>
-          </tr>
-        </thead>
+      <Table label="Nome" document="CPF" numberPhone="Celular" email="Email">
         <tbody>
           {data?.map((customerData) => (
-            <tr key={customerData.id}>
+            <StyledLines key={customerData.id}>
               <StyledTitleData>{customerData.name}</StyledTitleData>
-              <StyledTitleData>{document(customerData.document.toString())}</StyledTitleData>
+              <StyledTitleData>{documentFormat(customerData.document)}</StyledTitleData>
               <StyledTitleData>{customerData.numberPhone}</StyledTitleData>
               <StyledTitleData>{customerData.email}</StyledTitleData>
-            </tr>
+            </StyledLines>
           ))}
         </tbody>
-      </StyledTable>
+      </Table>
     </TableContainer>
   )
 }

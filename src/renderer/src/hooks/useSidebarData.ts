@@ -3,7 +3,7 @@ import React, { FC, useState } from 'react'
 import { RegisterCustomer, ListCustomer } from '@/pages'
 import { listCustomer, registerCustomer } from '@/utils'
 
-export const useSidebar = (): {
+export const useSidebarData = (): {
   handleButtonClick: (page: string) => void
   getPageComponent: () => React.FC
   currentPage: string

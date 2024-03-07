@@ -1,7 +1,7 @@
 export interface CustomerData {
-  id: string
+  id?: string
   name: string
-  document: number
-  numberPhone: number
+  document: string
+  numberPhone: string
   email: string
 }

@@ -1,2 +1,3 @@
 export * from './customer'
-export * from './format/document'
+export * from './format/documentFormat'
+export * from './format/removeFormat'
