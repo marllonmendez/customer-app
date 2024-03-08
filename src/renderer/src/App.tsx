@@ -1,9 +1,14 @@
 import { ReactElement } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-import { Home } from '@/pages/home'
+import { AppRoutes } from '@/routes'
 
 function App(): ReactElement {
-  return <Home />
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  )
 }
 
 export default App

@@ -1,3 +1,3 @@
-export * from './home'
-export * from './listCustomer'
-export * from './registerCustomer'
+export * from './HomePage'
+export * from './ListCustomerPage'
+export * from './RegisterCustomerPage'

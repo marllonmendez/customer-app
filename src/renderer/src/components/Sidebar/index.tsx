@@ -1,43 +1,18 @@
-import { ReactElement } from 'react'
+import { ReactElement, useState } from 'react'
+import { FaBars } from 'react-icons/fa'
 
-import { RiFileList3Fill } from 'react-icons/ri'
-import { HiUserPlus } from 'react-icons/hi2'
+import { WrapperSidebar } from '@/components/Sidebar/Wrapper'
 
-import {
-  ButtonText,
-  IconWrapper,
-  SidebarButton,
-  SidebarContainer,
-  SidebarTitle
-} from '@/components/Sidebar/styles'
-import { listCustomer, registerCustomer } from '@/utils'
+import { SidebarContainer } from './styles'
 
-type SidebarProps = {
-  title: string
-  buttonName: string[]
-  handle: (page: string) => void
-}
+const Sidebar = (): ReactElement => {
+  const [sidebar, setSidebar] = useState(false)
+  const showSidebar = (): void => setSidebar(!sidebar)
 
-const buttonIcons = {
-  [registerCustomer]: HiUserPlus,
-  [listCustomer]: RiFileList3Fill
-}
-
-function Sidebar({ title, buttonName, handle }: SidebarProps): ReactElement {
   return (
     <SidebarContainer>
-      <SidebarTitle>{title}</SidebarTitle>
-      {buttonName.map((value, index) => {
-        const Icon = buttonIcons[value]
-        return (
-          <SidebarButton key={index} onClick={() => handle(value)}>
-            <IconWrapper>
-              {Icon && <Icon size={20} />}
-              <ButtonText>{value}</ButtonText>
-            </IconWrapper>
-          </SidebarButton>
-        )
-      })}
+      <FaBars onClick={showSidebar} />
+      {sidebar && <WrapperSidebar active={setSidebar} />}
     </SidebarContainer>
   )
 }

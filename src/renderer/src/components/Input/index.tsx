@@ -10,13 +10,7 @@ type InputProps = {
   maxLength?: number
 }
 
-function Input({
-  label,
-  placeHolder,
-  value,
-  updateValue,
-  maxLength,
-}: InputProps): ReactElement {
+function Input({ label, placeHolder, value, updateValue, maxLength }: InputProps): ReactElement {
   return (
     <StyledInput>
       <StyledInputTitle>{label}</StyledInputTitle>

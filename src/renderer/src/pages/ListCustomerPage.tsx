@@ -5,11 +5,12 @@ import { useCustomerData } from '@/hooks/useCustomerData'
 import { listCustomer, documentFormat } from '@/utils'
 import { Table } from '@/components/Table'
 
-export function ListCustomer(): ReactElement {
+export function ListCustomerPage(): ReactElement {
   const { data } = useCustomerData()
 
   return (
     <TableContainer>
+      {/*campo de pesquisa, usar hash no Backend*/}
       <h1>{listCustomer}</h1>
       <Table label="Nome" document="CPF" numberPhone="Celular" email="Email">
         <tbody>

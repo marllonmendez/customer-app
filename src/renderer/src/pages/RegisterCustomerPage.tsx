@@ -6,7 +6,7 @@ import { CustomerData } from '@/interface'
 import { useCustomerDataMutate } from '@/hooks'
 import { registerCustomer, documentFormat, removeFormat } from '@/utils'
 
-export function RegisterCustomer(): ReactElement {
+export function RegisterCustomerPage(): ReactElement {
   const [name, setName] = useState<string>('')
   const [document, setDocument] = useState<string>('')
   const [numberPhone, setNumberPhone] = useState<string>('')
