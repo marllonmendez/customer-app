@@ -33,7 +33,8 @@ export const StyledColumnTitle = styled.th`
 
 export const StyledTitleData = styled.td`
   white-space: nowrap;
-  padding: 12px;
+  padding: 10px;
+  text-transform: capitalize;
 `
 export const StyledLines = styled.tr`
   white-space: nowrap;

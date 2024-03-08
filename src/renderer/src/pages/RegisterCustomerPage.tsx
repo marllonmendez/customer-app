@@ -44,6 +44,7 @@ export function RegisterCustomerPage(): ReactElement {
         placeHolder="(00) 0000-0000"
         value={phoneFormat(numberPhone)}
         updateValue={(value) => setNumberPhone(removeFormat(value))}
+        maxLength={10}
       ></Input>
       <Input
         label="Email"
