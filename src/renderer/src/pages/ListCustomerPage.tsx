@@ -2,7 +2,7 @@ import { ReactElement } from 'react'
 
 import { StyledTitleData, TableContainer, StyledLines } from '@/components/Table/styles'
 import { useCustomerData } from '@/hooks/useCustomerData'
-import { listCustomer, documentFormat } from '@/utils'
+import { listCustomer, documentFormat, phoneFormat } from '@/utils'
 import { Table } from '@/components/Table'
 
 export function ListCustomerPage(): ReactElement {
@@ -18,7 +18,7 @@ export function ListCustomerPage(): ReactElement {
             <StyledLines key={customerData.id}>
               <StyledTitleData>{customerData.name}</StyledTitleData>
               <StyledTitleData>{documentFormat(customerData.document)}</StyledTitleData>
-              <StyledTitleData>{customerData.numberPhone}</StyledTitleData>
+              <StyledTitleData>{phoneFormat(customerData.numberPhone)}</StyledTitleData>
               <StyledTitleData>{customerData.email}</StyledTitleData>
             </StyledLines>
           ))}

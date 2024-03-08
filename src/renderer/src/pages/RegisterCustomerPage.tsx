@@ -4,8 +4,7 @@ import { Input } from '@/components/Input'
 import { InputContainer } from '@/components/Input/styles'
 import { CustomerData } from '@/interface'
 import { useCustomerDataMutate } from '@/hooks'
-import { registerCustomer, documentFormat, removeFormat } from '@/utils'
-
+import { registerCustomer, documentFormat, removeFormat, phoneFormat} from '@/utils'
 export function RegisterCustomerPage(): ReactElement {
   const [name, setName] = useState<string>('')
   const [document, setDocument] = useState<string>('')
@@ -43,8 +42,8 @@ export function RegisterCustomerPage(): ReactElement {
       <Input
         label="Celular"
         placeHolder="(00) 0000-0000"
-        value={numberPhone}
-        updateValue={(value) => setNumberPhone(value)}
+        value={phoneFormat(numberPhone)}
+        updateValue={(value) => setNumberPhone(removeFormat(value))}
       ></Input>
       <Input
         label="Email"
