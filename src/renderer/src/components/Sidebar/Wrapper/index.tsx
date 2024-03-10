@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react'
-import { FaTimes } from 'react-icons/fa'
-import { RiFileList3Fill } from 'react-icons/ri'
-import { HiUserPlus } from 'react-icons/hi2'
+import { IoListCircle } from 'react-icons/io5'
+import { HiUserAdd, HiUserGroup } from 'react-icons/hi'
 
 import { ItemSidebar } from '@/components/Sidebar/Item'
 import { WrapperSidebarContainer, Content, StyledLink } from '@/components/Sidebar/Wrapper/styles'
@@ -18,13 +17,13 @@ function WrapperSidebar({ active }: WrapperSidebarProps): ReactElement {
 
   return (
     <WrapperSidebarContainer sidebar={active}>
-      <FaTimes onClick={closeWrapper} />
+      <IoListCircle onClick={closeWrapper} />
       <Content>
         <StyledLink to={REGISTER}>
-          <ItemSidebar label={registerCustomer} icon={HiUserPlus} />
+          <ItemSidebar label={registerCustomer} icon={HiUserAdd} />
         </StyledLink>
         <StyledLink to={LIST}>
-          <ItemSidebar label={listCustomer} icon={RiFileList3Fill} />
+          <ItemSidebar label={listCustomer} icon={HiUserGroup} />
         </StyledLink>
       </Content>
     </WrapperSidebarContainer>

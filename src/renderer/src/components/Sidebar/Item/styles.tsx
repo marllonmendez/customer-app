@@ -3,10 +3,10 @@ import styled from 'styled-components'
 export const ItemSidebarContainer = styled.div`
   display: flex;
   align-items: center;
-  background-color: #1a202c;
+  background-color: var(--primary-color);
   font-size: 20px;
   font-weight: 600;
-  color: white;
+  color: var(--secondary-color);
   padding: 10px;
   cursor: pointer;
   border-radius: 10px;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const WrapperSidebarContainer = styled.div`
-  background-color: #171923;
+  background-color: var(--sidebar-color);
   position: fixed;
   height: 100%;
   width: 300px;
@@ -11,7 +11,7 @@ export const WrapperSidebarContainer = styled.div`
 
   > svg {
     position: fixed;
-    color: white;
+    color: var(--primary-color);
     width: 30px;
     height: 30px;
     margin-top: 32px;

@@ -3,11 +3,12 @@
 :root {
   --global-font-family: 'Poppins', sans-serif;
   --primary-color: #FFFFFF;
-  --secondary-color: #252836;
+  --secondary-color: #04041a; /* #252836 */
   --hover-color: #04041a;
   --border-color: #c6c5c5c5;
   --text-color: #000000E5;
   --line-color: #f2f2f2;
+  --sidebar-color: #070826;
 }
 
 * {
@@ -26,14 +27,26 @@ body {
   height: 100vh;
 }
 
-.container {
-  display: flex;
+@media screen and (min-width: 1520px ){
+  .container {
+    display: flex;
+  }
+  .sidebar {
+    width: 16%;
+  }
+  .children {
+    width: 88%;
+  }
 }
 
-.sidebar-wrapper {
-  width: 19%;
-}
-
-.page-wrapper {
-  flex: auto;
+@media screen and (max-width: 1900px ){
+  .container {
+    display: flex;
+  }
+  .sidebar {
+    width: 20%;
+  }
+  .children {
+    width: 80%;
+  }
 }

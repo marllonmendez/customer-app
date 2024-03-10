@@ -6,7 +6,7 @@ export const SidebarContainer = styled.div`
 
   > svg {
     position: fixed;
-    color: white;
+    color: var(--primary-color);
     width: 30px;
     height: 30px;
     margin-top: 32px;

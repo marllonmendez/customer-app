@@ -5,13 +5,11 @@ import { Sidebar } from '@/components/Sidebar'
 
 export const HomePage = ({ children }: { children: ReactNode }): ReactElement => {
   return (
-    <main>
-      <div className="container">
-        <div className="sidebar-wrapper">
-          <Sidebar />
-        </div>
-        <div className="page-wrapper">{children}</div>
+    <main className="container">
+      <div className="sidebar">
+        <Sidebar />
       </div>
+      <div className="children">{children}</div>
     </main>
   )
 }
