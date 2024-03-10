@@ -9,14 +9,13 @@ export const WrapperSidebarContainer = styled.div`
   width: 300px;
   animation: showSidebar.4s;
 
-  > svg {
+  h2 {
     position: fixed;
     color: var(--primary-color);
     width: 30px;
     height: 30px;
     margin-top: 32px;
     margin-left: 32px;
-    cursor: pointer;
   }
 
   @keyframes showSidebar {
