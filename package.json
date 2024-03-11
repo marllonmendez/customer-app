@@ -1,6 +1,6 @@
 {
   "name": "customer-app",
-  "version": "1.7.4-dev",
+  "version": "1.8.4-dev",
   "description": "Front Application Customer",
   "main": "./out/main/index.js",
   "author": "marllonmendez",
