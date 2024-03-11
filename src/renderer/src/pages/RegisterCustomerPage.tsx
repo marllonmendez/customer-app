@@ -1,15 +1,20 @@
 import { ReactElement, useState } from 'react'
 
 import { Input } from '@/components/Input'
+import { Alert } from '@/components/Alert'
+import { Button } from '@/components/Button'
 import { InputContainer } from '@/components/Input/styles'
+import { ButtonContainer } from '@/components/Button/styles'
 import { CustomerData } from '@/interface'
 import { useCustomerDataMutate } from '@/hooks'
 import { registerCustomer, documentFormat, removeFormat, phoneFormat } from '@/utils'
+
 export function RegisterCustomerPage(): ReactElement {
   const [name, setName] = useState<string>('')
   const [document, setDocument] = useState<string>('')
   const [numberPhone, setNumberPhone] = useState<string>('')
   const [email, setEmail] = useState<string>('')
+  const [showModal, setShowModal] = useState<boolean>(false)
 
   const { mutate } = useCustomerDataMutate()
 
@@ -21,9 +26,19 @@ export function RegisterCustomerPage(): ReactElement {
       email
     }
     mutate(customerData)
+    setShowModal(true)
   }
 
-  // Criar onCler
+  const onCloseModal = (): void => {
+    setShowModal(false)
+  }
+
+  const onClear = (): void => {
+    setName('')
+    setDocument('')
+    setNumberPhone('')
+    setEmail('')
+  }
 
   return (
     <InputContainer>
@@ -54,7 +69,20 @@ export function RegisterCustomerPage(): ReactElement {
         value={email}
         updateValue={(value) => setEmail(value)}
       />
-    {/*  Criar campos de Button */}
+      <ButtonContainer>
+        <Button label="SALVAR" onClick={onSubmit} />
+        <Button label="LIMPAR" onClick={onClear} />
+      </ButtonContainer>
+      {showModal && (
+        <Alert
+          message={
+            !name || !document || !numberPhone || !email
+              ? `Prencha todos os campos`
+              : `Sucesso ao registrar: ${name.toUpperCase()}`
+          }
+          onClose={onCloseModal}
+        />
+      )}
     </InputContainer>
   )
 }
