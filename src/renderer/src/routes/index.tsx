@@ -23,14 +23,6 @@ const AppRoutes = (): ReactElement => {
           </HomePage>
         }
       />
-      <Route
-        path="/document"
-        element={
-          <HomePage>
-            <ListCustomerPage />
-          </HomePage>
-        }
-      />
     </Routes>
   )
 }

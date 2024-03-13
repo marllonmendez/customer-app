@@ -2,6 +2,5 @@
 
 export const env = {
   POST: import.meta.env.VITE_API_URL + '/customers/create',
-  GET: import.meta.env.VITE_API_URL + '/customers/list',
-  PUT: import.meta.env.VITE_API_URL + '/customers/document'
+  GET: import.meta.env.VITE_API_URL + '/customers/list'
 }

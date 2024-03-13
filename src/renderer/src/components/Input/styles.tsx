@@ -33,6 +33,7 @@ export const StyledInputData = styled.input`
   padding: 12px;
   border: 2px solid var(--border-color);
   color: var(--text-color);
+  outline: none;
   font-size: 18px;
   border-radius: 12px;
   margin-bottom: 12px;

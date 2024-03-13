@@ -7,7 +7,7 @@ interface TableProps {
   document: string
   numberPhone: string
   email: string
-  children: ReactNode
+  children?: ReactNode
 }
 
 function Table({ label, document, numberPhone, email, children }: TableProps): ReactElement {

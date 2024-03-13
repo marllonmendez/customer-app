@@ -5,7 +5,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { CustomerData } from '@/interface/CustomerData'
 import { env } from '@/env'
 
-const postData = async (data: CustomerData): AxiosPromise<any> => {
+const postData = async (data: CustomerData): AxiosPromise<string> => {
   return axios.post(env.POST, data)
 }
 
