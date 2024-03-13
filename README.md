@@ -1,34 +1,42 @@
-# customer-app
+# Customer APP 
+Aplicação Frontend desenvolvida com [Electron](https://electron-vite.org/guide/)
 
-An Electron application with React and TypeScript
+### Tecnologias Utilizadas:
+- React.js
+- React-Icons
+- Styled-Components
+- React-Query
+- Prettier
+- Eslint
+- Electron
+- Vite
 
-## Recommended IDE Setup
+### Configuração:
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-## Project Setup
-
-### Install
-
+**1. Instalação**
 ```bash
-$ npm install
+# Abreviada
+npm i
+
+# Normal
+npm install
 ```
 
-### Development
+**2. Execução**
 
 ```bash
-$ npm run dev
+npm run dev
 ```
 
-### Build
+**3. Build**
 
 ```bash
 # For windows
-$ npm run build:win
+$npm run build:win
 
 # For macOS
-$ npm run build:mac
+$npm run build:mac
 
 # For Linux
-$ npm run build:linux
+npm run build:linux
 ```
